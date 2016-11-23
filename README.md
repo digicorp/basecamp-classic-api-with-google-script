@@ -3,8 +3,8 @@
 This repository contains the end to end solution to create google app script that connects with [Basecamp Classic API](https://github.com/basecamp/basecamp-classic-api) and get the different set of datasets based on needs. The solution that described here solved our problem of generating timesheet from basecamp at [Digicorp](https://www.digi-corp.com) with few click and easy of use. this whole tutorial divided into following three sections.
 
 1. [Core Library (Lib.gs)](#core-library)
-2. [Helper Class (Helper.gs)](#Helper Class)
-3. [Controller (Controller.gs)](#Controller)
+2. [Helper Class (Helper.gs)](#helper-class)
+3. [Controller (Controller.gs)](#controller)
 
 _[Note : It is assumed that one will have basic knowledge of how to create google app script on google spreadsheet. So basic steps of creating script files and authorization of same is not included in this tutorial. You can refer [Google App Script](https://developers.google.com/apps-script/) for more help ]_
 
@@ -14,14 +14,14 @@ We have created core library that contains generic functions and methods that us
 
 Function                                      | Type         | Description                                                  | Input                          | Output
 --------------------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------ | -------------
-[Execute API](#Execute API)                   | Core Library | Function to invoke API based on provided inputs              | `url`,`username`,`password`    | `response`
-[Get Active Sheet](#Get Active Sheet)         | Core Library | Function to get active spreadsheet                           | `sheetname`                    | `spreadsheet`
-[Insert Sheet](#Insert Sheet)                 | Core Library | Function to get create new sheet under active spreadsheet    | `sheetname`                    | `spreadsheet`
-[Get Items](#Get Items)                       | Core Library | Function to get child items for provided parent key from XML | `apiresponse','key`            | `items`
-[Clear Sheet](#Clear Sheet)                   | Core Library | Method to clear sheet's content and formatting               | `sheet`                        | `-`
-[Set Cell Value](#Set Cell Value)             | Core Library | Method to set value in specific cell of sheet                | `sheet`,`row`,`column`,`value` | `-`
-[Get Cell Value](#Get Cell Value)             | Core Library | Method to get value of specific cell of sheet                | `sheet`,`row`,`column`         | `-`
-[Get Child Item Value](#Get Child Item Value) | Core Library | Function to get value of specific child item of array        | `array`,`index`,`key`          | `value`
+[Execute API](#execute-api)                   | Core Library | Function to invoke API based on provided inputs              | `url`,`username`,`password`    | `response`
+[Get Active Sheet](#get-active-sheet)         | Core Library | Function to get active spreadsheet                           | `sheetname`                    | `spreadsheet`
+[Insert Sheet](#insert-sheet)                 | Core Library | Function to get create new sheet under active spreadsheet    | `sheetname`                    | `spreadsheet`
+[Get Items](#get-items)                       | Core Library | Function to get child items for provided parent key from XML | `apiresponse','key`            | `items`
+[Clear Sheet](#clear-sheet)                   | Core Library | Method to clear sheet's content and formatting               | `sheet`                        | `-`
+[Set Cell Value](#set-cell-value)             | Core Library | Method to set value in specific cell of sheet                | `sheet`,`row`,`column`,`value` | `-`
+[Get Cell Value](#get-cell-value)             | Core Library | Method to get value of specific cell of sheet                | `sheet`,`row`,`column`         | `-`
+[Get Child Item Value](#get-child-item-value) | Core Library | Function to get value of specific child item of array        | `array`,`index`,`key`          | `value`
 
 ## Execute API
 
@@ -211,13 +211,13 @@ We have created helper class that contains business logic specific functions and
 
 Function                                | Type         | Description                                                                               | Input                            | Output
 --------------------------------------- | ------------ | ----------------------------------------------------------------------------------------- | -------------------------------- | -------------
-[Constants](#Constants)                 | Helper Class | To use username, password and url throughout the helper class, it is defined as constants | `-`                              | `-``
-[Call Basecamp API](#Call Basecamp API) | Helper Class | Function to call API and get response in XML                                              | `xml`                            | `response`
-[Get People](#Get People)               | Helper Class | Function used to get the list of People                                                   | `-`                              | `people`
-[Get Projects](#Get Projects)           | Helper Class | Function used to get the list of Projects                                                 | `-`                              | `projects`
-[Get TODO Lists](#Get TODO Lists)       | Helper Class | Function used to get the list of TODO Lists                                               | `subjectiid`                     | `todolists`
-[Get TODO Items](#Get TODO Items)       | Helper Class | Function used to get the list of TODO Items                                               | `todo_list_id`                   | `todoitems`
-[Get Time Entries](#Get Time Entries)   | Helper Class | Function used to get the list of Time Entries                                             | `fromdate`,`todate`,`subjectiid` | `timeentries`
+[Constants](#constants)                 | Helper Class | To use username, password and url throughout the helper class, it is defined as constants | `-`                              | `-``
+[Call Basecamp API](#call-basecamp-api) | Helper Class | Function to call API and get response in XML                                              | `xml`                            | `response`
+[Get People](#get-people)               | Helper Class | Function used to get the list of People                                                   | `-`                              | `people`
+[Get Projects](#get-projects)           | Helper Class | Function used to get the list of Projects                                                 | `-`                              | `projects`
+[Get TODO Lists](#get-todo-lists)       | Helper Class | Function used to get the list of TODO Lists                                               | `subjectiid`                     | `todolists`
+[Get TODO Items](#get-todo-items)       | Helper Class | Function used to get the list of TODO Items                                               | `todo_list_id`                   | `todoitems`
+[Get Time Entries](#get-time-entries)   | Helper Class | Function used to get the list of Time Entries                                             | `fromdate`,`todate`,`subjectiid` | `timeentries`
 
 ## Constants
 
@@ -351,10 +351,10 @@ A controller class contains methods and events that demonstrates the use of core
 
 Function                                | Type       | Description                               | Input | Output
 --------------------------------------- | ---------- | ----------------------------------------- | ----- | ------
-[Create Menu](#Create Menu)             | Controller | Event to create menu with submenu item    | `-`   | `-`
-[List People](#List People)             | Controller | Event to insert list of people in sheet   | `-`   | `-`
-[List Projects](#List Projects)         | Controller | Event to insert list of projects in sheet | `-`   | `-`
-[List Time Entries](#List Time Entries) | Controller | Event to insert time entries sheet        | `-`   | `-`
+[Create Menu](#create-menu)             | Controller | Event to create menu with submenu item    | `-`   | `-`
+[List People](#list-people)             | Controller | Event to insert list of people in sheet   | `-`   | `-`
+[List Projects](#list-projects)         | Controller | Event to insert list of projects in sheet | `-`   | `-`
+[List Time Entries](#list-time-entries) | Controller | Event to insert time entries sheet        | `-`   | `-`
 
 ## Create Menu
 
