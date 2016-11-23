@@ -2,7 +2,7 @@
 
 This repository contains the end to end solution to create google app script that connects with [Basecamp Classic API](https://github.com/basecamp/basecamp-classic-api) and get the different set of datasets based on needs. The solution that described here solved our problem of generating timesheet from basecamp at [Digicorp](https://www.digi-corp.com) with few click and easy of use. this whole tutorial divided into following three sections.
 
-1. [Core Library (Lib.gs)](#Core Library)
+1. [Core Library (Lib.gs)](#core-library)
 2. [Helper Class (Helper.gs)](#Helper Class)
 3. [Controller (Controller.gs)](#Controller)
 
