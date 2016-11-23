@@ -111,6 +111,6 @@ function GetCellValue(sheet,row,column)
  */
 function GetChildItemValue(array,index,key)
 {
-  return array[index].getChild(key).getText();
+  return array[index].getChild(key).getText(); 
 }
 
